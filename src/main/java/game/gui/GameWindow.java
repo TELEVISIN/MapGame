@@ -1,6 +1,15 @@
 package game.gui;
 
+import game.map.MapSetup;
+
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class GameWindow {
 
@@ -16,8 +25,6 @@ public class GameWindow {
         gameWindow.pack();
         gameWindow.setVisible(true);
     }
-
-
 
     private JMenuBar createGameMenuBar() {
         JMenuBar gameMenuBar = new JMenuBar();
