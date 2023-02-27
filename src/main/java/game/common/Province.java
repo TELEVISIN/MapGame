@@ -2,7 +2,9 @@ package game.common;
 
 public class Province {
     private int id;
-    private int rgb;
+    private int red;
+    private int green;
+    private int blue;
     private Terrain terrainType;
     private String name;
 
@@ -23,11 +25,13 @@ public class Province {
     private float provinceManpower;
     private float provinceSailors;
 
-    public Province(int id, Terrain terrainType, int rgb,
+    public Province(int id, Terrain terrainType, int red, int green, int blue,
                     int numOfPeasant, int numOfBurgher, int numOfNobility, int numOfClergy, int numOfBureaucrat) {
         this.id = id;
         this.terrainType = terrainType;
-        this.rgb = rgb;
+        this.red = red;
+        this.green = green;
+        this.blue = blue;
         this.numOfPeasant = numOfPeasant;
         this.numOfBureaucrat = numOfBureaucrat;
         this.numOfBurgher = numOfBurgher;
@@ -53,9 +57,6 @@ public class Province {
         return terrainType;
     }
 
-    public int getRgb() {
-        return rgb;
-    }
     public float getProvinceTax() {
         return provinceTax;
     }

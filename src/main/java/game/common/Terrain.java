@@ -5,5 +5,6 @@ public enum Terrain {
     FARMLAND,
     HILLS,
     MOUNTAINS,
-    DESERT
+    DESERT,
+    WASTELAND
 }
