@@ -30,9 +30,14 @@ public class MapSetup {
         }
 
         for (int i = 0; i < provinceRGBs.size(); i++) {
-            provinceList.add(new Province(i, Terrain.PLAINS, provinceRGBs.get(i)));
+            provinceList.add(new Province(i, Terrain.PLAINS, provinceRGBs.get(i), 10, 4, 2, 1, 2));
             System.out.println(provinceList.get(i).getId() + ", " +
-                    provinceList.get(i).getTerrainType().toString());
+                    provinceList.get(i).getTerrainType() +
+                    ", tax in province: " + provinceList.get(i).getProvinceTax() +
+                    ", production in province: " + provinceList.get(i).getProvinceProduction() +
+                    ", manpower in province: " + provinceList.get(i).getProvinceManpower() +
+                    ", researchPoints in province: " + provinceList.get(i).getProvinceResearchPoints() +
+                    ", importRoutes in province: " + provinceList.get(i).getProvinceResearchPoints());
         }
     }
 }
