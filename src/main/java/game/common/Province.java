@@ -6,6 +6,7 @@ public class Province {
     private Terrain terrainType;
     private String name;
 
+    // TODO: 27/02/2023 change pops using message in #general (sent 11:12 27/2/23)
     private int numOfPeasant;
     private int numOfBurgher;
     private int numOfNobility;
