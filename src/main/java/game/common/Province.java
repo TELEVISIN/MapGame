@@ -4,6 +4,7 @@ public class Province {
     private int id;
     private int rgb;
     private Terrain terrainType;
+    private String name;
 
     public Province(int id, Terrain terrainType, int rgb) {
         this.id = id;

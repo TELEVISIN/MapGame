@@ -32,10 +32,7 @@ public class MapSetup {
         for (int i = 0; i < provinceRGBs.size(); i++) {
             provinceList.add(new Province(i, Terrain.PLAINS, provinceRGBs.get(i)));
             System.out.println(provinceList.get(i).getId() + ", " +
-                    provinceList.get(i).getTerrainType().toString() + ", " +
-                    provinceList.get(i).getRgb());
+                    provinceList.get(i).getTerrainType().toString());
         }
-
-        System.out.println(provinceList);
     }
 }
