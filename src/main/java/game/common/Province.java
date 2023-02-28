@@ -25,9 +25,10 @@ public class Province {
     private float provinceManpower;
     private float provinceSailors;
 
-    public Province(int id, Terrain terrainType, int red, int green, int blue,
+    public Province(int id, String name, Terrain terrainType, int red, int green, int blue,
                     int numOfPeasant, int numOfBurgher, int numOfNobility, int numOfClergy, int numOfBureaucrat) {
         this.id = id;
+        this.name = name;
         this.terrainType = terrainType;
         this.red = red;
         this.green = green;
@@ -75,5 +76,21 @@ public class Province {
 
     public float getProvinceManpower() {
         return provinceManpower;
+    }
+
+    public int getRed() {
+        return red;
+    }
+
+    public int getGreen() {
+        return green;
+    }
+
+    public int getBlue() {
+        return blue;
+    }
+
+    public String getName() {
+        return name;
     }
 }
