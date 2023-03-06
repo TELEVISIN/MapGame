@@ -6,5 +6,7 @@ public enum Terrain {
     HILLS,
     MOUNTAINS,
     DESERT,
-    WASTELAND
+    WASTELAND,
+    SEA,
+    OCEAN
 }
