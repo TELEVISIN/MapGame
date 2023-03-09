@@ -5,6 +5,7 @@ import game.map.Provincegenerator;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
@@ -25,7 +26,14 @@ public class GameWindow {
         JLabel provinceLabel = new JLabel(new ImageIcon("src/main/resources/mapdata/provincemap.png"));
         BufferedImage provincemap = ImageIO.read(new File("src/main/resources/mapdata/provincemap.png"));
 
+        setMouseListenerOnProvinceMap(provinceLabel, provincemap);
 
+        gameWindow.getContentPane().add(provinceLabel);
+        gameWindow.pack();
+        gameWindow.setVisible(true);
+    }
+
+    private void setMouseListenerOnProvinceMap(JLabel provinceLabel, BufferedImage provincemap) {
         provinceLabel.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
@@ -38,13 +46,10 @@ public class GameWindow {
                 int blue = (pixel) & 0xff;
 
                 Province currentProvince = findByRGB(red, green, blue);
-                System.out.println(currentProvince.getId() + " - " + currentProvince.getName() + ": " + currentProvince.getTerrainType());
+                System.out.println(currentProvince.getId() + " - " + currentProvince.getName() + ": " + currentProvince.getTerrainType() +
+                        "\nManpower: " + currentProvince.getProvinceManpower() + " - Province Import Routes: " + currentProvince.getProvinceImportRoutes());
             }
         });
-
-        gameWindow.getContentPane().add(provinceLabel);
-        gameWindow.pack();
-        gameWindow.setVisible(true);
     }
 
     private JMenuBar createGameMenuBar() {
